@@ -12,7 +12,7 @@ namespace Brownie.Server.Core.Startup
         {
             services.AddDbContext<CrudContext>(options =>
             {
-                options.UseSqlServer(configuration.GetConnectionString("greenstalk"));
+                options.UseSqlServer(configuration.GetConnectionString("crud"));
                 options.EnableSensitiveDataLogging(true);
             });
 
