@@ -1,16 +1,17 @@
-Project Employee-Crud
-Details:
-Front End: Angular Framework
-Backend: .Net Core Framework
-Database: Sql Server
+Project: Employee-Crud
+
+	Details:
+	Front End: Angular Framework
+	Backend: .Net Core Framework
+	Database: Sql Server
 
 Requirement:
-	Go to command prompt install angular cli "npm install -g @angular/cli"
+	Go to command prompt install angular cli "npm install -g @angular/cli
 	Visual Studio
 	Sql Server
 	Mircrosoft Sql Server Management Studio
-
-
+	
+	
 Instructions:
 
 	Database:
