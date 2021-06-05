@@ -1,0 +1,93 @@
+<div class="flex justify-center">
+    
+    <div class="p-3 shadow w-1/2 mt-3">
+        <div  class="float-right">
+            <a [routerLink]="['new']" mat-raised-button color="primary">
+                New Employee
+            </a>
+        </div>
+        <h1>List of Employees</h1>
+        
+        <mat-table
+        [dataSource]="dataSources"
+        matSort
+        class="table-striped"
+        (matSortChange)="sortdata($event)"
+        >
+            <ng-container matColumnDef="Id">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>
+                    ID
+                </mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                    {{ element.id }}</mat-cell
+                >
+            </ng-container>
+
+            <ng-container matColumnDef="FirstName">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>
+                    FIRSTNAME
+                </mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                    {{ element.firstName }}
+                </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="MiddleName">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>
+                    MIDDLENAME
+                </mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                    {{ element.middleName}}
+                </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="LastName">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>
+                    LASTNAME
+                </mat-header-cell>
+                <mat-cell *matCellDef="let element"
+                    >{{ element.lastName}}
+                </mat-cell>
+            </ng-container>
+
+
+            <ng-container matColumnDef="Option">
+                <mat-header-cell *matHeaderCellDef>OPTION </mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                    <button
+                    mat-icon-button
+                    color="white"
+                    aria-label
+                    (click)="editEmployee(element.id)"
+                    >
+                    <mat-icon>edit</mat-icon>
+                    </button>
+                    <button
+                    mat-icon-button
+                    color="white"
+                    aria-label
+                    (click)="deleteEmployee(element.id)"
+                    >
+                    <mat-icon>delete</mat-icon>
+                    </button>
+                </mat-cell>
+            </ng-container>
+            <mat-header-row
+            *matHeaderRowDef="displayedColumns"
+            class="table-header"
+            ></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+        </mat-table>
+
+        <mat-paginator
+        class="cards__paginator"
+        [pageIndex]="pageIndex"
+        [pageSize]="pageSize"
+        [pageSizeOptions]="[10, 5, 25, 100]"
+        [length]="totalCount"
+        [showFirstLastButtons]="true"
+        (page)="onPageChanged($event)"
+        >
+        </mat-paginator>
+    </div>
+</div>

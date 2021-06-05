@@ -1,0 +1,20 @@
+<form [formGroup]="employeeForm">
+   
+    <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Last Name</mat-label>
+        <input type="text" matInput autocomplete="off" formControlName="lastName" />
+        <mat-error>Last Name is Required</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="w-full">
+      <mat-label>First Name</mat-label>
+      <input type="text" matInput autocomplete="off" formControlName="firstName" />
+      <mat-error>First Name is Required</mat-error>
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Middle Name</mat-label>
+        <input type="text" matInput autocomplete="off" formControlName="middleName" />
+      </mat-form-field>
+   
+     
+</form>

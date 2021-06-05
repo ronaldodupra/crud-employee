@@ -1,0 +1,14 @@
+<div class="justify-center flex items-center h-full">
+    <div class="w-1/4 shadow p-3">
+        <h1>New Employee</h1>
+        <app-form-employee></app-form-employee>
+        <div class="float-right">
+            <button type="submit" class="mr-3" color="primary" mat-raised-button (click)="saveEmployee()">
+                Save
+            </button>
+            <a (click)="cancel()" mat-raised-button>
+                Cancel
+            </a>
+        </div>
+    </div>
+</div>

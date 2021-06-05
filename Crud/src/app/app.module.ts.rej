@@ -1,0 +1,9 @@
+diff a/Brownie.Client/src/app/app.module.ts b/Brownie.Client/src/app/app.module.ts	(rejected hunks)
+@@ -70,7 +70,6 @@
+     RoleComponent,
+     RoledialogComponent,
+     ProductDialogComponent,
+-    HarvestComponent,HarvestDialogComponent, HarvestDetailsComponent
+     HarvestComponent,
+     HarvestDialogComponent,
+     HarvestDetailsComponent,
